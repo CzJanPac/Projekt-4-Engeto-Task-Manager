@@ -24,6 +24,12 @@ def pridat_ukol():
         break
 
 def zobrazit_ukoly():
+    
+    if not ukoly:
+        print("")
+        print("Seznam úkolů je prázdný.")
+        return
+    
     print("""
 Seznam úkolů:""")
     
@@ -31,6 +37,12 @@ Seznam úkolů:""")
         print(f"{index}. {ukol}")
 
 def odstranit_ukol():
+    
+    if not ukoly:
+        print("")
+        print("Seznam úkolů je prázdný.")
+        return
+
     zobrazit_ukoly()
     
     while True:        
@@ -78,7 +90,7 @@ Správce úkolů - Hlavní menu
         elif vyber_z_menu == 3:
             odstranit_ukol()
         elif vyber_z_menu == 4:
-            print("Konec programu")
+            print("Konec programu.")
             break
 
 hlavni_menu()
